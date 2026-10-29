@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Contact Us</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="logo">ShopEase<span>.</span></h1>
+
+            <div class="search-box">
+                <input type="text" id="homeSearch" placeholder="Search products...">
+                <button type="button" onclick="searchProducts()">Search</button>
+            </div>
+
+            <div class="header-buttons">
+                <button type="button" id="themeButton">Dark Mode</button>
+                   <a href="wishlist.html" class="wishlist-link">
+                    ♡ Wishlist
+                </a>
+                <a href="cart.html" class="cart-link">
+                    Cart (<span id="cartCount">0</span>)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="products.html#categories">Categories</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <main>
+
+        <section class="page-banner">
+            <p>WE ARE HERE TO HELP</p>
+            <h2>Contact Us</h2>
+            <span>Have a question? Send us a message.</span>
+        </section>
+
+        <section class="contact-section">
+
+            <div class="contact-info">
+                <p class="section-label">GET IN TOUCH</p>
+
+                <h2>We'd Love to Hear From You</h2>
+
+                <p>
+                    Have a question about our products or website?
+                    Fill out the contact form and let us know what
+                    you need help with.
+                </p>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>support@shopease.example</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">🛍️</div>
+                    <div>
+                        <h3>Shopping Help</h3>
+                        <p>Questions about products and your cart.</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">💬</div>
+                    <div>
+                        <h3>Feedback</h3>
+                        <p>Share your suggestions to improve ShopEase.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact-form-container">
+
+                <h2>Send Us a Message</h2>
+
+                <p>Complete the form below.</p>
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <label for="contactName">Full Name</label>
+                        <input
+                            type="text"
+                            id="contactName"
+                            name="name"
+                            placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address</label>
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">Subject</label>
+                        <select id="contactSubject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="Product Question">Product Question</option>
+                            <option value="Order Question">Order Question</option>
+                            <option value="Website Feedback">Website Feedback</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Your Message</label>
+                        <textarea
+                            id="contactMessage"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        Send Message
+                    </button>
+
+                    <p id="contactStatus" class="form-status" aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="contact-note">
+            <h2>Thank You for Visiting ShopEase!</h2>
+            <p>
+                Your feedback helps us make this student project
+                more useful and user-friendly.
+            </p>
+            <a href="products.html" class="shop-button">Explore Products</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h2>ShopEase<span>.</span></h2>
+                <p>Your simple destination for everyday shopping.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
