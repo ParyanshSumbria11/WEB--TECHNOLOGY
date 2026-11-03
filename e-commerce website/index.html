@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="logo">ShopEase<span>.</span></h1>
+
+            <div class="search-box">
+                <input type="text" id="homeSearch" placeholder="Search products...">
+                <button type="button" onclick="searchProducts()">Search</button>
+            </div>
+
+            <div class="header-buttons">
+                <button type="button" id="themeButton">Dark Mode</button>
+                 <a href="wishlist.html" class="wishlist-link">
+                    ♡ Wishlist
+                </a>
+                <a href="cart.html" class="cart-link">Cart (<span id="cartCount">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="products.html#categories">Categories</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-tag">WELCOME TO SHOPEASE</p>
+
+                <h2>Shopping Made Simple</h2>
+
+                <p>
+                    Discover amazing products, explore your favourite
+                    categories, and enjoy a simple shopping experience
+                    with ShopEase.
+                </p>
+
+                <a href="products.html" class="shop-button">Explore Products</a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+                    alt="Modern clothing and shopping store">
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="section-heading">
+                <p>EXPLORE OUR STORE</p>
+                <h2>Shop by Category</h2>
+                <span>Find something you will love.</span>
+            </div>
+
+            <div class="category-container">
+
+                <a href="products.html?category=Electronics" class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h3>Electronics</h3>
+                    <p>Useful gadgets and devices</p>
+                </a>
+
+                <a href="products.html?category=Clothing" class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h3>Clothing</h3>
+                    <p>Everyday fashion and style</p>
+                </a>
+
+                <a href="products.html?category=Accessories" class="category-card">
+                    <div class="category-icon">⌚</div>
+                    <h3>Accessories</h3>
+                    <p>Small things that stand out</p>
+                </a>
+
+                <a href="products.html?category=Footwear" class="category-card">
+                    <div class="category-icon">👟</div>
+                    <h3>Footwear</h3>
+                    <p>Comfort for every step</p>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="section-heading">
+                <p>HANDPICKED FOR YOU</p>
+                <h2>Featured Products</h2>
+                <span>Check out some popular picks from our store.</span>
+            </div>
+
+            <div class="product-container">
+
+                <div class="product-card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQExLOAucF10M58F8qE6iRLnZo6tXAdlZUDwp48JWEYRQ&s=10"
+                        alt="Red sports sneakers">
+
+                    <div class="product-info">
+                        <p class="product-category">Footwear</p>
+                        <h3>Sneakers</h3>
+                        <p class="product-description">
+                            Comfortable shoes for everyday use.
+                        </p>
+                        <div class="product-bottom">
+                            <span class="product-price">₹1,299</span>
+                            <button type="button" onclick="addToCart(1)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMhayNU5gZm4mIfmbcDdoTMB-wXhH_8CEepRZ8eB3YrQ&s=10"
+                        alt="Stylish wristwatch">
+
+                    <div class="product-info">
+                        <p class="product-category">Accessories</p>
+                        <h3>Classic Watch</h3>
+                        <p class="product-description">
+                            A simple watch for everyday style.
+                        </p>
+                        <div class="product-bottom">
+                            <span class="product-price">₹2,999</span>
+                            <button type="button" onclick="addToCart(2)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdii7Dw_4vy3savqwFtPsYaQViMe-HNx0YRctJB59K0A&s=10"
+                        alt="Wireless headphones">
+
+                    <div class="product-info">
+                        <p class="product-category">Electronics</p>
+                        <h3>Headphones</h3>
+                        <p class="product-description">
+                            Enjoy music, videos, and entertainment.
+                        </p>
+                        <div class="product-bottom">
+                            <span class="product-price">₹2,499</span>
+                            <button type="button" onclick="addToCart(4)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="view-all">
+                <a href="products.html" class="view-all-button">
+                    View All Products
+                </a>
+            </div>
+        </section>
+
+        <section class="offer-section">
+            <div>
+                <p class="offer-tag">YOUR SHOPPING DESTINATION</p>
+                <h2>Good Products. Simple Shopping.</h2>
+                <p>
+                    Explore our collection of electronics, clothing,
+                    accessories, and footwear in one place.
+                </p>
+            </div>
+
+            <a href="products.html" class="offer-button">Start Shopping</a>
+        </section>
+
+        <section class="benefits-section">
+            <div class="benefit-card">
+                <span>🛍️</span>
+                <h3>Easy Shopping</h3>
+                <p>Browse products through a simple and clear layout.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span>🔎</span>
+                <h3>Quick Search</h3>
+                <p>Find products without browsing the entire collection.</p>
+            </div>
+
+            <div class="benefit-card">
+                <span>🛒</span>
+                <h3>Simple Cart</h3>
+                <p>Add products and review your selected items.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h2>ShopEase<span>.</span></h2>
+                <p>Your simple destination for everyday shopping.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
