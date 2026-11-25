@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | GCET Jammu</title>
+    <link rel="stylesheet" href="collegewebsite.css">
+</head>
+
+<body class="login-page">
+
+    <header class="site-header">
+        <div class="logo-section">
+            <img src="https://imgs.search.brave.com/ff5zukB70PFKq2ZLllm5NkbCuciYUW7cAJPf2-rPd1M/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tYW5h/Z2UuY29sbG5vZC5j/b20vVXBsb2FkL0Nv/bnRlbnQvd2ViX2lt/Z18wXzRfNF8yMDI2/XzEwXzQ4XzYuSlBH" alt="College Logo">
+            <div>
+                <h1>Government College of Engineering and Technology, Jammu</h1>
+                <h3>(Autonomous College)</h3>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button type="button" id="themeButton" class="theme-toggle-btn">Dark Mode</button>
+            <a href="loginform.html" class="header-login">Login</a>
+        </div>
+    </header>
+
+    <div class="nav-wrapper">
+        <button type="button" id="menuToggle" class="menu-toggle">☰ Menu</button>
+        <nav id="mainNav">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="students.html">Students</a>
+            <a href="admission.html">Admission</a>
+            <a href="gallery.html">Photo Gallery</a>
+        </nav>
+    </div>
+
+    <main>
+        <div style="max-width: 420px; margin: 20px auto;">
+            <h2>Student Portal Login</h2>
+            <div class="under-line"></div>
+            <p style="font-size: 0.9rem; margin-bottom: 20px;">
+                Demo Credentials:<br>
+                Roll: <strong>2512011</strong> | Pass: <strong>12345</strong> (Paryansh Sumbria)<br>
+                Roll: <strong>CS101</strong> | Pass: <strong>12345</strong> (Aarav Sharma)<br>
+                Roll: <strong>IT103</strong> | Pass: <strong>34567</strong> (Kabir Singh)
+            </p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Roll Number:</label>
+                    <input type="text" id="username" placeholder="Enter Roll Number">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter Password">
+                </div>
+
+                <button type="button" id="loginBtn" class="btn-primary" style="width: 100%; background-color: #ff9800;">Login</button>
+
+                <p id="loginMessage" class="form-status"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Government College of Engineering &amp; Technology, Jammu. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

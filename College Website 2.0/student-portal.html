@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | GCET Jammu</title>
+    <link rel="stylesheet" href="collegewebsite.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="dashboard-header">
+        <div>
+            <h1>GCET Jammu</h1>
+            <p>Student Portal | Academic Dashboard</p>
+        </div>
+
+        <div class="header-actions">
+            <button type="button" id="themeButton" class="theme-toggle-btn">Dark Mode</button>
+            <button type="button" id="logoutBtn" class="logout-button">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-card">
+            <p id="studentBatchLabel" class="dashboard-label">
+                BATCH 2025 · THIRD SEMESTER · 2025–2029
+            </p>
+            <h2 id="welcomeMessage">Welcome!</h2>
+            <p id="studentCourseTop">Bachelor of Technology</p>
+        </section>
+
+        <section class="dashboard-card">
+            <h2>My Profile</h2>
+            <p><strong>Student Name:</strong> <span id="studentName"></span></p>
+            <p><strong>Student Roll Number:</strong> <span id="studentRoll"></span></p>
+            <p><strong>Course:</strong> <span id="studentCourse"></span></p>
+            <p><strong>Branch:</strong> <span id="studentBranch"></span></p>
+            <p><strong>Current Semester:</strong> <span id="studentSemester"></span></p>
+            <p><strong>Batch:</strong> <span id="studentBatch"></span></p>
+            <p><strong>Academic Session:</strong> <span id="studentSession"></span></p>
+        </section>
+
+        <section class="dashboard-card">
+            <h2>Student Marks Calculator (5 Subjects)</h2>
+            <p>Enter marks (0–100) for five subjects to calculate total, percentage, and grade dynamically.</p>
+
+            <div class="marks-grid">
+                <div class="marks-input-group">
+                    <label for="sub1">Subject 1 (OOP C++ &amp; Java):</label>
+                    <input type="number" id="sub1" min="0" max="100" placeholder="0 - 100">
+                </div>
+                <div class="marks-input-group">
+                    <label for="sub2">Subject 2 (Digital System Design):</label>
+                    <input type="number" id="sub2" min="0" max="100" placeholder="0 - 100">
+                </div>
+                <div class="marks-input-group">
+                    <label for="sub3">Subject 3 (Web Technology):</label>
+                    <input type="number" id="sub3" min="0" max="100" placeholder="0 - 100">
+                </div>
+                <div class="marks-input-group">
+                    <label for="sub4">Subject 4 (Engg. Mathematics-III):</label>
+                    <input type="number" id="sub4" min="0" max="100" placeholder="0 - 100">
+                </div>
+                <div class="marks-input-group">
+                    <label for="sub5">Subject 5 (Entrepreneurship):</label>
+                    <input type="number" id="sub5" min="0" max="100" placeholder="0 - 100">
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" id="calculateMarksBtn" class="btn-primary">Calculate Result</button>
+                <button type="button" id="resetMarksBtn" class="btn-secondary">Clear Marks</button>
+            </div>
+
+            <p id="marksError" class="form-status"></p>
+            <div id="marksResultBox" class="calc-result-box"></div>
+        </section>
+
+        <section class="dashboard-card">
+            <h2>My Subjects - Semester III</h2>
+            <table>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Subject Name</th>
+                    <th>Faculty</th>
+                </tr>
+                <tr>
+                    <td>BCSL31</td>
+                    <td>Object Oriented Programming using C++ &amp; Java Lab</td>
+                    <td>Tawqeer ul Islam</td>
+                </tr>
+                <tr>
+                    <td>BCSL32</td>
+                    <td>Digital System Design Lab</td>
+                    <td>Deepak Sharma</td>
+                </tr>
+                <tr>
+                    <td>BCSL33</td>
+                    <td>Web Technology Lab</td>
+                    <td>Yawar Azad</td>
+                </tr>
+                <tr>
+                    <td>BCST31</td>
+                    <td>Object Oriented Programming using C++ &amp; Java</td>
+                    <td>Tawqeer ul Islam</td>
+                </tr>
+                <tr>
+                    <td>BCST32</td>
+                    <td>Digital System Design</td>
+                    <td>Deepak Sharma</td>
+                </tr>
+                <tr>
+                    <td>BCST33</td>
+                    <td>Web Technology</td>
+                    <td>Yawar Azad</td>
+                </tr>
+                <tr>
+                    <td>BHST31</td>
+                    <td>Entrepreneurship And Business Strategies</td>
+                    <td>Vikram Singh</td>
+                </tr>
+                <tr>
+                    <td>BMAT32</td>
+                    <td>Engineering Mathematics-III</td>
+                    <td>Dr. Heera Saini</td>
+                </tr>
+                <tr>
+                    <td>MOCS31</td>
+                    <td>MooC</td>
+                    <td>Ankita Sharma</td>
+                </tr>
+                <tr>
+                    <td>NCCS31</td>
+                    <td>Cyber Ethics &amp; Laws</td>
+                    <td>Neeraj Kumar Dubey</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="dashboard-card">
+            <h2>My Result - Semester I</h2>
+            <div class="result-summary">
+                <div>
+                    <h3 id="resultPercentage">73.44%</h3>
+                    <p>Overall Percentage</p>
+                </div>
+                <div>
+                    <h3 id="resultTotalMarks">661 / 900</h3>
+                    <p>Total Marks</p>
+                </div>
+            </div>
+
+            <p><strong>Result Status:</strong> <span id="resultStatus">Pass</span></p>
+            <p><strong>Credits Earned:</strong> <span id="resultCredits">20 / 20</span></p>
+            <p><strong>Courses Completed:</strong> <span id="resultCourses">9 / 9</span></p>
+
+            <h3>Subject-wise Marks</h3>
+            <table>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                    <th>Total Marks</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Computer Programming (Lab)</td>
+                    <td>68</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Computer Programming</td>
+                    <td>57</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Basic Electronics Engineering Lab</td>
+                    <td>68</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Basic Electronics Engineering</td>
+                    <td>65</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Universal Human Values and Ethics</td>
+                    <td>69</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Engineering Mathematics-I</td>
+                    <td>89</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Engineering Graphics with CAD</td>
+                    <td>65</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Applied Engineering Physics Lab</td>
+                    <td>88</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Applied Engineering Physics</td>
+                    <td>92</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Total</th>
+                    <th>661</th>
+                    <th>900</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GCET Jammu. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
